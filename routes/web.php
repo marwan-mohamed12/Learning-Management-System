@@ -18,14 +18,6 @@ Route::get('/', function () {
 
 // Authentication Required Routes
 Route::middleware('auth')->group(function () {
-
-    // Profile Routes
-    Route::prefix('profile')->name('profile.')->group(function () {
-        Route::get('/', [ProfileController::class, 'edit'])->name('edit');
-        Route::patch('/', [ProfileController::class, 'update'])->name('update');
-        Route::delete('/', [ProfileController::class, 'destroy'])->name('destroy');
-    });
-
     // Courses Routes
     Route::resource('courses', CourseController::class)->middleware('verified');
 
