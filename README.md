@@ -67,6 +67,9 @@ https://github.com/marwan-mohamed12/Learning-Management-System/assets/40841193/3
 - **Login:** Use your registered credentials to log in.
 - **Course Management:** Navigate to the dashboard and you will find options to create, view, edit, and delete courses.
 - **Contact Form:** Use the contact form to reach the admin.
+- **Admin Account Credentials:**
+  - Email: bortuyosta@gufum.com
+  - Password: Q=d-AT$@e3A+L#>
 
 **Note:**
 
