@@ -2,6 +2,11 @@
 
 This repository contains a basic Learning Management System (LMS) built with Laravel. This application provides user registration, course management, and a contact form for users to reach the admin.
 
+- [Live Demo](https://learning-management-system-production.up.railway.app/)
+- Video Demo
+
+https://github.com/marwan-mohamed12/Learning-Management-System/assets/40841193/3697f67c-b7a2-47ab-bc0f-ffb12589a8d4
+
 **Features:**
 
 - **User Registration & Authentication:**
@@ -20,33 +25,45 @@ This repository contains a basic Learning Management System (LMS) built with Lar
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/laravel-lms.git
+   git clone https://github.com/marwan-mohamed12/Learning-Management-System.git
    ```
 2. **Install dependencies:**
    ```bash
    cd laravel-lms
    composer install
    ```
-3. **Set up your database:**
+3. **Make .env file:**
+   ```bash
+   cp .env.example .env
+   ```
+   
+4. **Generate Key:**
+   ```bash
+   php artisan key:generate
+   ```
+   
+5. **Set up your database:**
    - Create a new database for the application.
    - Configure your database credentials in the `.env` file.
    - Run database migrations:
      ```bash
      php artisan migrate
      ```
-4. **Set up the email configuration:**
+6. **Set up the email configuration:**
    - Configure your email settings in the `.env` file.
    - Ensure that you have set the `MAIL_FROM_ADDRESS` to the desired admin email address.
-5. **Start the development server:**
+     
+7. **Start the development server:**
    ```bash
    php artisan serve
    ```
-6. **Access the application:**
+8. **Access the application:**
    - Open your web browser and visit `http://localhost:8000`.
 
 **Instructions:**
 
 - **User Registration:** Go to the registration page and fill in the required details to create an account.
+- **User Verification:** After registration, you'll receive an email with a verification link. Click the link to activate your account and gain access to the platform.
 - **Login:** Use your registered credentials to log in.
 - **Course Management:** Navigate to the dashboard and you will find options to create, view, edit, and delete courses.
 - **Contact Form:** Use the contact form to reach the admin.
