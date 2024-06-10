@@ -39,10 +39,10 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" name="email" />
-                <input type="password" placeholder="Password" name="password" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
-                <button type="submit">Sign In</button>
+                <button>Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
