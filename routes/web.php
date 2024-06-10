@@ -21,6 +21,12 @@ Route::middleware('auth')->group(function () {
     // Courses Routes
     Route::resource('courses', CourseController::class)->middleware('verified');
 
+    // Contact Routes
+    Route::prefix('contact')->name('contact.')->group(function () {
+        Route::get('/', [ContactController::class, 'show'])->name('show');
+        Route::post('/', [ContactController::class, 'send'])->name('send');
+    });
+
     // Email Verification Routes
     Route::prefix('email')->name('verification.')->group(function () {
         Route::get('verify', function () {
@@ -39,11 +45,8 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-// Contact Routes
-Route::prefix('contact')->name('contact.')->group(function () {
-    Route::get('/', [ContactController::class, 'show'])->name('show');
-    Route::post('/', [ContactController::class, 'send'])->name('send');
-});
-
-
 require __DIR__ . '/auth.php';
+
+Route::fallback(function () {
+    return view('errors.404'); // Assuming you have an errors/404.blade.php view
+});
