@@ -27,11 +27,12 @@
                     <td>
                         <a href="{{ route('courses.show', $course->id) }}" class="btn btn-info btn-sm"><i
                                 class="fas fa-eye"></i></a>
+                        @if(Auth::user()->name == 'admin')
                         <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-warning btn-sm"><i
                                 class="fas fa-edit"></i></a>
                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                             data-bs-target="#deleteModal{{ $course->id }}"><i class="fas fa-trash"></i></button>
-
+                        @endif
                         <!-- Delete Confirmation Modal -->
                         <div class="modal fade" id="deleteModal{{ $course->id }}" tabindex="-1" role="dialog"
                             aria-labelledby="deleteModalLabel{{ $course->id }}" aria-hidden="true">
@@ -78,10 +79,12 @@
                 <p class="card-text"><small class="text-muted">End Date: {{ $course->end_date }}</small></p>
                 <a href="{{ route('courses.show', $course->id) }}" class="btn btn-info btn-sm"><i
                         class="fas fa-eye"></i></a>
+                @if(Auth::user()->name == 'admin')
                 <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-warning btn-sm"><i
                         class="fas fa-edit"></i></a>
                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                     data-bs-target="#deleteModalMobile{{ $course->id }}"><i class="fas fa-trash"></i></button>
+                @endif
             </div>
         </div>
 
