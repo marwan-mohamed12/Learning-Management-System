@@ -2,24 +2,24 @@
 
 @section('content')
 <div class="container">
-    <h1>Create Course</h1>
-    <form action="{{ route('courses.store') }}" method="POST">
+    <h1 class="my-4">Create Course</h1>
+    <form action="{{ route('courses.store') }}" method="POST" class="bg-light p-5 rounded shadow-sm">
         @csrf
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" name="title" class="form-control" required>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" id="title" class="form-control" required>
         </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea name="description" class="form-control" rows="5" required></textarea>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" id="description" class="form-control" rows="5" required></textarea>
         </div>
-        <div class="form-group">
-            <label for="start_date">Start Date</label>
-            <input type="date" name="start_date" class="form-control" required>
+        <div class="mb-3">
+            <label for="start_date" class="form-label">Start Date</label>
+            <input type="date" name="start_date" id="start_date" class="form-control" required>
         </div>
-        <div class="form-group">
-            <label for="end_date">End Date</label>
-            <input type="date" name="end_date" class="form-control" required>
+        <div class="mb-3">
+            <label for="end_date" class="form-label">End Date</label>
+            <input type="date" name="end_date" id="end_date" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
